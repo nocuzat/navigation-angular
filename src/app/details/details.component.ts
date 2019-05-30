@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { KeyService } from '../key.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-details',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private KeyProvider: KeyService) {
+    this.KeyProvider.getNews().subscribe((data)=>{console.log(data)})
+   }
 
   ngOnInit() {
   }

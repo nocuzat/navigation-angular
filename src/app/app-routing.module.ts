@@ -8,12 +8,12 @@ import { SubjectComponent } from './subject/subject.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppComponent } from './app.component';
 
-const routes: Routes = [{path:"",component:HomeComponent},{path:"welcome",component:WelcomeComponent, children:[{path:"welcome",component: WelcomeComponent},{path:"subject",component: SubjectComponent},
+const routes: Routes = [{path:"welcome",component:HomeComponent},{path:"welcome",component:WelcomeComponent, children:[{path:"welcome",component: WelcomeComponent},{path:"subject",component: SubjectComponent},
   {path:"contact",component: ContactComponent},
   {path:"details",component: DetailsComponent}]},
   {path:"subject",component: SubjectComponent},
   {path:"contact",component: ContactComponent},
-  {path:"details",component: DetailsComponent}]; 
+  {path:"details",component: DetailsComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
